@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.form-select, .form-select:focus {
+  border: none; /* Removes the border */
+  background-color: transparent; /* Ensures background is transparent */
+  box-shadow: none; /* Removes the default box-shadow */
+}
+.form-control:focus {
+  border: none; /* Removes the border */
+  background-color: transparent; /* Ensures background is transparent */
+  box-shadow: none; /* Removes the default box-shadow */
+}
+.badge-custom-left {
+  left: calc(100% - 20px); /* Adjust this value to shift the badge left */
+}
+.hover-danger:hover{
+   color: #d10024;
+}
+#Electro{
+  border-bottom: 3px solid red;
+}
+#link{
+  color: rgb(71,46,85); 
+}
+
+/* Base style for navbar links */
+.nav-item>.nav-link {
+  color: rgb(71,46,85); /* Default color is grey */
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Add a pseudo-element to act as the underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Underline height */
+  bottom: -2px;
+  left: 0;
+  background-color: red;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect - increase the width of underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+#links:hover {
+  color: red; /* Change text color to red on hover */
+}
+
+/* Visited state - make underline and color permanent  */
+ .nav-link:visited {
+  color: rgb(71,46,85);
+} 
+
+#links:visited::after {
+  width: 100%; /* Underline is permanent after visiting */
+  background-color: red;
+}
+
+
+/* Basic Card Styles */
+.custom-card {
+  transition: transform 4ms ease-in-out;
+  background-size: cover;
+  background-position: center;
+  height: 270px;
+  width: 380px;
+  position: relative;
+  border: none;
+  border-radius: none;
+  overflow: hidden;
+}
+#card-one {
+  background-image: url('../images/laptop.webp');
+}
+
+#card-two {
+  background-image: url('../images/headphones.webp');
+}
+
+#card-three {
+  background-image: url('../images/camera.webp');
+}
+
+/* Zoom Effect on Hover */
+#card-one:hover,
+#card-two:hover,
+#card-three:hover {
+  transition: transform 4ms ease-in-out;
+  cursor: pointer;
+  background-size: 120%; /* Increase background size by 20% */
+}
+
+
+/* Parallelogram Overlay */
+.parallelogram {
+  position: absolute;
+  bottom: 0;
+  left: -70px;
+  width: 92%;
+  height: 100%;
+  background-color: rgb(192,41,43);
+  transform: skew(-20deg);
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding-top: 47px;
+  padding-left: -4px;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 9rem) 100%, 0 100%);
+}
+
+/* Resetting the skew for content inside */
+.parallelogram h3,
+.parallelogram .custom-btn {
+  transform: skew(20deg); 
+  z-index: 1;
+}
+.parallelogram>h3{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+margin-left: -67px;
+  font-size: 24px; /* Font size */
+  font-style: normal; /* Font style */
+  font-weight: 600; /* Font weight */
+  font-family: Montserrat, sans-serif; /* Font family */
+  color:white; /* Font color */
+  background-color: rgba(0, 0, 0, 0); /* Background color */
+  text-align: start; /* Text alignment */
+  text-indent: 0px; /* Text indent */
+  line-height:1.1; /* Line height */
+  text-transform: none; /* Text transform */
+  text-decoration: none solid rgb(51, 51, 51); /* Text decoration */
+}
+
+
+/* Button styles */
+.custom-btn {
+  font-size: 14px;
+  color: white;
+  background: transparent;
+  /* padding: 10px 20px; */
+  margin-left: -27px;
+  margin-top: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Hover effect for the button */
+.custom-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .parallelogram {
+    height: 50%; /* Reduce height on smaller screens */
+  }
+}
+
+
