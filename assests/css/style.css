@@ -84,15 +84,20 @@ body {
   overflow: hidden;
 }
 #card-one {
+  background-color: rgb(228,231,237);
   background-image: url('../images/laptop.webp');
 }
 
 #card-two {
   background-image: url('../images/headphones.webp');
+  background-color: rgb(228,231,237);
+
 }
 
 #card-three {
   background-image: url('../images/camera.webp');
+  background-color: rgb(228,231,237);
+
 }
 
 /* Zoom Effect on Hover */
@@ -181,4 +186,66 @@ margin-left: -67px;
   }
 }
 
+.products-heading{
+  font-size: 24px;                     /* Font size */
+  font-style: normal;                  /* Font style */
+  font-weight: 700;                    /* Font weight */
+  font-family: 'Montserrat', sans-serif;/* Font family */
+  color: rgb(43, 45, 66);              /* Font color */
+  background-color: rgba(0, 0, 0, 0);  /* Background color */
+  text-align: start;                   /* Text alignment */
+  text-indent: 0;                      /* Text indent */
+  line-height: 26.4px;                 /* Line height */
+  text-transform: uppercase;           /* Text transformation */
+  text-decoration: none; 
+}
+.negative-left-padding{
+ margin-right: 37px;
+}
+.hover-red-color:hover{
+  color: red;
+}
 
+
+
+
+.product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  width: 260px; /* Width of the card */
+  height: 450px; /* Height of the card */
+  transition: border 0.3s, transform 0.3s; /* Transition for border and transform */
+  border: 2px solid grey; /* Default border */
+  position: relative; /* For hover info positioning */
+}
+.product-card:hover {
+  border: 2px solid red; /* Border on hover */
+  transform: translateY(-5px); /* Slightly lift card on hover */
+}
+.hover-info {
+  display: none; /* Hide by default */
+  width: 100%; /* Match card width */
+  height: 6rem; /* Set height for the div */
+  background-color: black; /* Background color */
+  position: absolute; /* Position below the card */
+  bottom: -3rem; /* Adjust this value for desired spacing */
+  left: 0; /* Align to the left */
+  z-index: 1; /* Bring to front */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content */
+}
+.product-card:hover .hover-info {
+  display: flex; /* Show on hover */
+}
+.add-to-cart-btn {
+  background-color: red; /* Button background color */
+  color: white; /* Button text color */
+}
+.add-to-cart-btn:hover {
+  background-color: white; /* Background on hover */
+  color: red; /* Text color on hover */
+  border: 2px solid red; /* Border on hover */
+}
